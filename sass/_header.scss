@@ -1,0 +1,58 @@
+body{
+    position: relative;
+}
+
+#masthead{
+
+    #top-bar{
+        background-color: $primary;
+        
+                div{
+                    p{
+                        font-size: .9rem;
+                        margin-bottom: 0px;
+                        padding-bottom: 0px;
+                        
+                        a{
+                            color: white;
+                            text-decoration: none;
+                            
+                            i{
+                                font-size: 1rem;
+                                color: white;
+                            }
+                        }
+                        
+                    }
+                }
+                
+            }
+            div{
+                .site-branding{
+                    display:flex;
+                    flex-flow:row wrap;
+                    justify-content:space-between;
+                    align-items:center;
+                    padding:0px 20px;
+                    
+                    a{
+                        .custom-logo{
+                            
+                            min-width: 200px;
+                            max-width: 350px;
+                            height: auto;
+                            @include media-breakpoint-down(lg) {
+                                
+                                max-width: 100%;
+                              }
+                              @include media-breakpoint-down(md) {
+                                
+                                max-width: 300px;
+                                width: 100%;
+                              }
+                        }
+                    }
+                }
+            }
+        }
+   

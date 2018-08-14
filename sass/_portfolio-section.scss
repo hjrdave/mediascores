@@ -1,0 +1,44 @@
+.thumbnail{
+    height: 100px;
+    width: 100%;
+}
+
+#FindMe{
+    div{
+        div{
+            div{
+                img{
+                   
+                }
+            }
+        }
+    }
+}
+#ColoredBox{
+    background-color: $primary;
+    div{
+        p{
+            color: white;
+        }
+    }
+}
+
+//Sections
+.page-section{
+    padding:40px;
+//border: 1px solid $primary;
+    &:nth-of-type(odd){
+
+      
+        background-color:lighten($grey,2%);
+        // background-color:lighten($primary,10%);
+    }
+    // h2{
+    //     &:nth-of-type(odd){
+
+      
+    //         //background-color:lighten($grey,2%);
+    //         color:white;
+    //     }
+    // }
+}

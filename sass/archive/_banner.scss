@@ -1,0 +1,74 @@
+//Banner styles
+#namicBanners{
+ 
+   .carousel-inner{
+    
+        div{
+            
+        }
+    .carousel-item{
+        height: 500px;
+        @include media-breakpoint-down(sm) {
+           height: 575px;
+          }
+
+        &:after{
+         
+            height: 100%;
+            width: 100%;
+        }
+        .carousel-content{
+            height: 100%;
+            max-width: 550px;
+            margin-left: 20%;
+            
+            @include media-breakpoint-down(md) {
+                max-width: none;
+                margin-left: 0%;
+              }
+             
+            .namic-banner-content{
+            
+                text-align: left;
+
+                @include media-breakpoint-down(md) {
+                    max-width: 75%;
+                    text-align: center;
+                  }
+
+                & > *{
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                }
+    
+                h1{
+                    //text-shadow: none;
+                }
+                p{
+                    //text-shadow: none;
+                }
+
+                .btn{
+                    // text-shadow: none;
+                    // border: $secondary;
+                    // background-color: $secondary;
+                }
+            }
+        }
+
+        
+    }
+
+   }
+}
+
+//Put this in test banner
+// <h1>S&amp;O FARMERS
+// MUTUAL INSURANCE</h1>
+// S&amp;O Farmers Mutual was originally founded in 1878 under the name of Switzerland &amp; Ohio Counties Patrons
+// Mutual Fire Insurance Company.
+
+// <a class="btn btn-primary" href="javascript">Learn More</a>	
+	
+		
+			

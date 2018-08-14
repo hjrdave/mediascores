@@ -1,0 +1,150 @@
+.port-card{
+    transition: transform .4s;
+    backface-visibility: hidden;
+    opacity: 1; //change this to 0 to turn fadein back on
+    transform: scale(1);//change this to 0 to turn scalein back on
+
+    &:hover{
+        transform:scale(1.1)!important;//this gets cancelled out when js runs fade in animation
+        @include media-breakpoint-down(md) {
+            transform:scale(1.05)!important;
+        }
+        @include media-breakpoint-down(sm) {
+            transform:scale(1)!important;
+        }
+
+        div{
+            
+            p{
+                opacity:1;
+            }
+            div{
+                
+                -ms-transform: scale(1.2);
+                -moz-transform: scale(1.2);
+                -webkit-transform: scale(1.2);
+                -o-transform: scale(1.2);
+                transform: scale(1.2);
+                @include media-breakpoint-down(md) {
+                    transform:scale(1.15)!important;
+                }
+                @include media-breakpoint-down(sm) {
+                    transform:scale(1)!important;
+                }
+                &:before{
+                    //display: block;
+                    opacity:1;
+                }
+            }
+        }
+    }
+
+    &:focus{
+        div{
+            p{
+                display: block;
+            }
+            div{
+                -ms-transform: scale(1.2);
+                -moz-transform: scale(1.2);
+                -webkit-transform: scale(1.2);
+                -o-transform: scale(1.2);
+                transform: scale(1.2);
+                @include media-breakpoint-down(md) {
+                    transform:scale(1)!important;
+                }
+
+                &:before{
+                    //display: block;
+                }
+            }
+        }
+    }
+
+    a{
+        backface-visibility: hidden;
+        
+        div{
+           // border: 1px solid $primary;
+            width: 100%;
+            max-width: 400px;
+            @include media-breakpoint-down(md) {
+                max-width: none;
+            }
+            overflow: hidden;
+            cursor: pointer;
+            //border-radius: 50%;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            -moz-backface-visibility: hidden;
+            -webkit-transform: translate3d(0, 0, 0);
+            -moz-transform: translate3d(0, 0, 0);
+
+            div{
+                
+                padding-top: 100%;
+                width: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                -webkit-transition: all .5s;
+                -moz-transition: all .5s;
+                -o-transition: all .5s;
+                transition: transform .5s;
+                //border-radius: 50%;
+                backface-visibility: hidden;
+
+                &:before{
+                    content: "";
+                    //display: none;
+                    opacity:0;
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transition: opacity .4s;
+                    background-color: rgba(74,60,82,.80);
+                    //border-radius: 50%;
+                    backface-visibility: hidden;
+                }
+
+                p{
+                    opacity:0;
+                    transition: opacity .4s;
+                    font-family: $font-medium;
+                    font-size: .8rem;
+                    color: #ffffff !important;
+                    text-align: center;
+                    margin: auto;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    padding: 20px;
+                    height: 50px;
+                    cursor: pointer;
+                    @include media-breakpoint-down(md) {
+                        font-size: 1rem;
+                    }
+                    @include media-breakpoint-down(sm) {
+                        font-size: 2rem;
+                    }
+                    @include media-breakpoint-down(xs) {
+                        font-size: 1.5rem;
+                    }
+                    span{
+                        font-size:.5em;
+                        font-family: $font-light;
+                        @include media-breakpoint-down(xs) {
+                            font-size: .6em;
+                        }
+                    }
+                }
+                }
+                
+        }
+    }
+}
+
+

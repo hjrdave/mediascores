@@ -1,0 +1,133 @@
+//Main Nav styles
+#mainnav{
+    padding-top: 0rem!important;
+    padding-bottom: 0rem!important;
+    div{
+        @include media-breakpoint-down(md) {
+            width: 100%;
+          }
+        
+    }
+}
+
+#primary-menu {
+    list-style-type:none;
+    margin:0px;
+    padding:0px;
+    text-align:center;
+    display:flex;
+    justify-content: flex-end;
+    flex-flow:row wrap;
+    
+
+    @include media-breakpoint-down(md) {
+        display:block;
+      }
+
+
+    .menu-item{
+        
+        @include media-breakpoint-down(md) {
+            border-top: 1px solid $light-2;
+          }
+          &:hover{
+            @include media-breakpoint-down(md) {
+                background-color: $primary;
+              }
+          }
+        a{
+          
+            border-bottom:5px solid rgba(0,0,0,0);
+            display:block;
+            padding:50px 15px 45px 15px;
+            color: $primary!important;
+            font-size:.9rem;
+            font-weight: 200;
+            text-decoration:none;
+            transition: color border-bottom-color .2s;
+
+            
+            
+
+            @include media-breakpoint-down(md) {
+                font-size: $font-size-base + .5;
+                font-weight: $font-weight-bold;
+              }
+
+            &:hover{
+                border-bottom-color: $secondary;
+                color:black;
+
+                @include media-breakpoint-down(md) {
+                    color: white;
+                    border-style: none;
+                  }
+            }
+            
+        }
+        &:nth-last-child(2){
+            padding-right: 35px;
+            @include media-breakpoint-down(md) {
+                padding-right: 0px;
+              }
+        }
+    }
+    .btn-menu{
+        margin-top: 35px;
+        height: 50px;
+        background-color: $green;
+        border: $green;
+        @include media-breakpoint-down(md) {
+            margin-bottom: 20px;
+            margin-top: 0px;
+            width: 100%;
+          }
+        a{
+            color: white;
+            font-size: 1rem;
+            margin-top: -50px;
+            
+            &:hover{
+                border-bottom-color: rgba(0,0,0,0);
+                color:white!important;
+            }
+        }
+    }
+}
+
+#m-menu {
+	margin:0px;
+	padding:0px;
+	background:none;
+	border:none;
+	font-size:2em;
+	outline:none;
+	margin-right:0px;
+	width:100%;
+	color: $light;
+}
+#m-menu.active {
+	//color:#03b4f7;
+}
+
+/*Mobile Nav*/
+
+.mobile-nav{
+    div{
+        div{
+            div{
+                ul{
+                    li{
+                        a{
+                            color: $primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+   

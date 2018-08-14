@@ -1,0 +1,49 @@
+#PortHeader{
+    div{
+        div{
+            //Logo
+            object{
+                //margin-top:-100px;
+                @include media-breakpoint-down(md) {
+                    height: 50vh;
+                    width: 100%;
+                    //border: 1px solid red;
+                }
+            }
+        }
+    }
+}
+
+
+#particles-js{
+    opacity: 0;
+    animation: fadein 2s forwards;
+    animation-delay: 1s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+//Landing Page Arrow
+#port-arrow{
+   opacity:0;
+   margin-bottom: 10%;
+}
+
+.pulse{
+    animation-name: pulse_animation;
+    animation-duration: 1500ms;
+    transform-origin:50% 50%;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    color: $primary;
+}
+
+
+@keyframes pulse_animation {
+    0% { transform: translateY(0px); }
+    50% { transform:  translateY(-20px); }
+    100% { transform:  translateY(0px); }
+}

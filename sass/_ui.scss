@@ -1,0 +1,135 @@
+
+
+//Anchor tags
+a{
+    color: black;
+    text-decoration:underline;
+    &:hover{
+        color: black;
+        font-weight: bold;
+    }
+}
+
+//Button Classes
+.btn {
+	font-size:0.8em !important;
+	padding:10px 20px !important;
+	min-width:150px;
+	text-shadow: none!important;
+	border: 2px solid $primary;
+	background-color: $secondary;
+    text-transform: uppercase;
+    color: white;
+    font-family: $font-medium;
+    text-decoration: none;
+    border-radius:0px;
+
+    span{
+        font-family: $font-medium; 
+    }
+    &:after{
+        font-family:"FontAwesome";
+        margin:0px 0px 0px 8px;
+    }
+}
+.btn-primary{
+    background-color: $primary;
+    border:2px solid $primary-dark;
+    &:hover{
+        color:#FFFFFF!important;
+        
+        background-color: $primary-dark;
+        transition:0.3s;
+    }
+}
+.btn-secondary{
+    background-color: $secondary;
+}
+.btn-dark {
+    background-color: $primary-dark;
+    color:#FFFFFF !important;
+    border:none !important;
+    &:hover{
+background-color:$primary-light;
+    }
+    &:active{
+        background-color:$primary-light;
+    }
+}
+.btn-light {
+    background-color:#03b4f7 !important;
+    background:linear-gradient(to right,#03b4f7,#25d6f9);
+    color:#FFFFFF !important;
+    border:none !important;
+}
+.btn-dark-o {
+    color:$primary !important;
+    border:2px solid $primary;
+    background-color:transparent;
+
+    &:hover{
+        color:#FFFFFF!important;
+        
+        background-color: $primary;
+        transition:0.3s;
+    }
+}
+.btn-light-o {
+    color:#03b4f7;
+    border:1px solid #03b4f7;
+    background-color:transparent;
+    
+    &:hover{
+        color:#FFFFFF;
+        border:2px solid $primary;
+        background-color:$primary;
+        transition:0.4s;
+    }
+}	
+.btn-white {
+    background-color:#FFFFFF;
+    color:transparent;
+}
+
+//Badges
+.badge{
+    font-size: 60%;
+    font-weight: normal;
+    margin: .25rem .20rem .20rem .20rem;
+    border-radius:0px;
+    padding:0px;
+}
+.badge-lg{
+    @extend .badge;
+    font-size: 100%;
+    padding: 10px;
+    font-family: $font-medium;
+    //margin: 100px!important;
+    margin: .25rem .20rem .20rem .20rem!important;
+}
+.badge-primary{
+    background-color: $primary;
+    border:2px solid $primary;
+    margin: .20rem .10rem .10rem .10rem!important;
+
+}
+.badge-primary-o{
+    color:$primary;
+    border:2px solid $primary;
+    background-color:transparent;
+    font-family: $font-medium;
+    
+    margin: .20rem .10rem .10rem .10rem;
+}
+
+//Waiting for image to load before animations start
+.js-loading *,
+.js-loading *:before,
+.js-loading *:after {
+  animation-play-state: paused !important;
+}
+
+
+
+
+
