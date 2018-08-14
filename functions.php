@@ -186,44 +186,14 @@ function add_theme_scripts() {
 	//CDN jQuery
 	wp_enqueue_script( 'jquery_custom', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js', array('velocity.js','velocity.ui.js'), 3.3, true );
 
-	//Pace.js
-	wp_enqueue_script( 'pace.js', 'https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js#asyncload', array(), 1.0, true);
-
-	//Velocity.js
-	wp_enqueue_script( 'velocity.js', 'https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.1/velocity.min.js', array('pace.js'), 1.5, true);
-
-	//Velocity.ui.js
-	wp_enqueue_script( 'velocity.ui.js', 'https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.1/velocity.ui.min.js', array('velocity.js'), 1.5, true );
-
 	//My Scripts
 	wp_enqueue_script( 'script', get_template_directory_uri() . '/js/scripts.min.js', array ('jquery_custom', 'animate'), 1.1, true);
 
-	//Animate.js
-	wp_enqueue_script( 'animate', get_template_directory_uri() . '/js/animate.min.js', array ('jquery_custom'), 1.1, true);
-
-	//Portfolio Page scripts
-	if(is_page(12)):
-		//Smooth Scroll
-		wp_enqueue_script( 'smoothscroll', get_template_directory_uri() . '/js/smoothscroll.js', array ('jquery_custom'), null, true);
-
-		//ScrollSpy
-		wp_enqueue_script( 'scrollspy', get_template_directory_uri() . '/js/scrollspy.js', array ('jquery_custom'), null, true);
-	endif;
-	
 	//Popper.js
 	wp_enqueue_script( 'popper.js', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', array(), 1.12, true );
 
 	//Bootstrap.js
 	wp_enqueue_script( 'bootstrap.js', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', array('jquery_custom','popper.js'), 4.0, true );
-
-	//Sticky.js
-	wp_enqueue_script( 'sticky.js', 'https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js', array('jquery_custom'), 1.0, true );
-
-	//Chart.js
-	wp_enqueue_script( 'chart.js', 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js', array('jquery_custom'), 2.7, true );
-   
-	//Particle.js
-	wp_enqueue_script( 'particle.js', 'https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js', array('jquery_custom'), 2.0, true );
   }
 
 add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
