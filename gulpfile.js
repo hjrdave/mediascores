@@ -7,14 +7,11 @@ Click here to learn more. https://go.microsoft.com/fwlink/?LinkId=518007
 
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var concat = require('gulp-concat');
-var usemin = require('gulp-usemin');
 var uglify = require('gulp-uglify');
-var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
-var pump = require('pump');
 const zip = require('gulp-zip');
 var livereload = require('gulp-livereload');
+
 var gutil = require( 'gulp-util' );
 var ftp = require( 'vinyl-ftp' );
 
